@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Specifies character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsive design for mobile devices -->
+    <title>Cart</title>
+    <link rel="icon" href="logos/PKTS LOGO.png" type="image/png"> <!-- Favicon for browser tab -->
+    <link rel="stylesheet" href="css/cart.css" /> <!-- Stylesheet specific to the Cart page -->
+</head>
+<body>
+  <div class="top-bar">
+    <header class="main-header">
+      <div class="logo-container">
+        <a href="homepage.html" class="logo-text">
+          <img src="logos/PKTS LOGO.png" alt="PKTS Logo" class="header-logo"> <!-- PKTS logo linking to homepage -->
+        </a>
+      </div>
+      <div class="hamburger-container">
+                <div class="container" id="hamburger" onclick="myFunction(this); openNav();"> <!-- Hamburger menu for mobile navigation -->
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+      <div class="main-nav-container">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="Homepage.html" class="active">HOME</a></li> <!-- Active class highlights current page (note: should be on cart) -->
+            <li><a href="about.html">ABOUT</a></li>
+            <li class="dropdown has-submenu"><a href="">PRODUCTS</a> <!-- Dropdown menu for products -->
+              <div class="dropdown-content">
+                <a href="uniform.html">Uniforms</a>
+                <a href="eqpmnt.html">Gears</a>
+              </div>
+            </li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="register.html">APPOINTMENT</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="logo-container">
+        <a href="cart.html">
+          <img src="logos/shopping-cart (1).png" alt="Cart Logo" class="header-logo-cart"> <!-- Cart icon linking to cart page -->
+        </a>
+        <a href="homepage.html" class="logo-text">
+          <img src="logos/JKS LOGO.png" alt="JKS Logo" class="header-logo"> <!-- JKS logo linking to homepage -->
+        </a>
+      </div>
+    </header>
+  </div>
+
+  <!-- Side Navigation Bar -->
+  <div id="mySidenav" class="sidenav"> <!-- Mobile side navigation menu -->
+    <span class="closebtn" onclick="closeNav()">&times;</span> <!-- Close button for side nav -->
+    <a href="Homepage.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <div class="dropdown has-submenu">
+      <a href="#">PRODUCTS</a> <!-- Dropdown for products in side nav -->
+      <div class="dropdown-content">
+        <a href="uniform.html">Uniforms</a>
+        <a href="eqpmnt.html">Gears</a>
+      </div>
+    </div>
+    <a href="contact.html">CONTACT</a>
+    <a href="register.html">APPOINTMENT</a>
+    <a href="cart.html" id="cart" class="cart-container">
+      <img src="logos/shopping-cart (1).png" alt="Cart Logo"> <!-- Cart icon in side nav -->
+    </a>
+  </div>
+
+  <div class="page-wrapper">
+    <div class="container">
+      <h1>Your Shopping Cart</h1> <!-- Cart page title -->
+      <div id="cart-items">
+      </div> <!-- Container for dynamically loaded cart items -->
+      <div class="cart-summary">
+        <p class="subtotal">
+          Subtotal: <span id="subtotal">₱0.00</span> <!-- Displays cart subtotal -->
+        </p>
+        <div style="display: flex; justify-content: center; gap: 15px; margin-top: 20px;">
+          <button id="clear-cart-btn" class="clear-cart-button">Clear Cart</button> <!-- Button to clear all items from cart -->
+          <button id="checkout-btn" class="checkout-button">Checkout</button> <!-- Button to proceed to checkout -->
+        </div>
+      </div>
+      <div id="cart-toast" class="toast">Thank You For Your Patronage!</div> <!-- Toast notification for cart actions -->
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 PKTS Karate Dojo. All Rights Reserved.</p> <!-- Footer with copyright notice -->
+  </footer>
+
+  <script src="js/hp.js"></script> <!-- JavaScript for general homepage functionality -->
+  <script src="js/cart-view.js"></script> <!-- JavaScript for rendering cart items -->
+  <script src="js/cart.js"></script> <!-- JavaScript for cart functionality -->
+</body>
+</html>

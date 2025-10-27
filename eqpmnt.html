@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsive design for mobile devices -->
+    <title>Equipments</title>
+    <link rel="icon" href="logos/PKTS LOGO.png" type="image/png">
+    <link rel="stylesheet" href="css/prod.css" />
+</head>
+<body>
+<div class="page-wrapper">
+  <div class="top-bar">
+    <header class="main-header">
+      <div class="logo-container">
+        <a href="homepage.html" class="logo-text">
+          <img src="logos/PKTS LOGO.png" alt="PKTS Logo" class="header-logo">
+        </a>
+      </div>
+      <div class="hamburger-container" id="hamburger" onclick="myFunction(this); openNav();"> <!-- Hamburger menu for mobile navigation -->
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <div class="main-nav-container">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="Homepage.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li class="dropdown has-submenu"><a href="#">PRODUCTS</a>
+              <div class="dropdown-content">
+                <a href="uniform.html">Uniforms</a>
+                <a href="eqpmnt.html" class="active">Gears</a> <!-- Active class for current page -->
+              </div>
+            </li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="register.html">APPOINTMENT</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="logo-container">
+        <a href="cart.html" class="cart-container header-cart">
+          <img src="logos/shopping-cart (1).png" alt="Cart Logo" class="header-logo-cart">
+          <span class="cart-count" id="cart-count">0</span> <!-- Add this for item count -->
+        </a>
+        <a href="homepage.html" class="logo-text">
+          <img src="logos/JKS LOGO.png" alt="JKS Logo" class="header-logo">
+        </a>
+      </div>
+    </header>
+  </div>
+
+  <!-- Side Navigation Bar -->
+  <div id="mySidenav" class="sidenav"> <!-- Mobile side navigation menu -->
+    <span class="closebtn" onclick="closeNav()">&times;</span> <!-- Close button for side nav -->
+    <a href="Homepage.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <div class="dropdown has-submenu">
+      <a href="#" onclick="toggleDropdown(this)">PRODUCTS</a> <!-- Dropdown for products in side nav -->
+      <div class="dropdown-content">
+        <a href="uniform.html">Uniforms</a>
+        <a href="eqpmnt.html">Gears</a>
+      </div>
+    </div>
+    <a href="contact.html">CONTACT</a>
+    <a href="register.html">APPOINTMENT</a>
+  </div>
+
+  <div class="container">
+    <div class="product" data-name="3-Ways Karate Bag" data-price="2500" data-image="PROD/Bag1.jpg">
+      <div class="carousel-container">
+        <div class="carousel-wrapper">
+          <div class="carousel-slide active">
+            <img src="PROD/Bag1.jpg" alt="Bag1">
+          </div>
+          <div class="carousel-slide">
+            <img src="PROD/Bag2.jpg" alt="Bag2">
+          </div>
+        </div>
+        <div class="carousel-indicators">
+          <div class="carousel-indicator active"></div>
+          <div class="carousel-indicator"></div>
+        </div>
+      </div>
+      <p class="product-name">3-Ways Karate Bag</p>
+      <p class="price">₱2,500</p>
+      <button class="add-to-cart-button">Add to Cart</button>
+    </div>
+
+    <div class="product" data-name="Body Armor" data-price="1500" data-image="PROD/Eqp4.jpeg">
+      <img src="PROD/Eqp4.jpeg" alt="Body Armor">
+      <p class="product-name">Body Armor</p>
+      <p class="price">₱1,500</p>
+      <div class="size-selection">
+        <select class="size-select">
+          <option>Please select size</option>
+          <option>XS</option>
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+          <option>XL</option>
+          <option>XXL</option>
+        </select>
+      </div>
+      <button class="add-to-cart-button">Add to Cart</button>
+    </div>
+
+    <div class="product" data-name="Body Armor with Breast Protector" data-price="3000" data-image="PROD/Eqp1.jpg">
+      <div class="carousel-container">
+        <div class="carousel-wrapper">
+          <div class="carousel-slide active">
+            <img src="PROD/Eqp1.jpg" alt="Eqp1">
+          </div>
+          <div class="carousel-slide">
+            <img src="PROD/Eqp3.jpeg" alt="Eqp3">
+          </div>
+        </div>
+        <div class="carousel-indicators">
+          <div class="carousel-indicator active"></div>
+          <div class="carousel-indicator"></div>
+        </div>
+      </div>
+      <p class="product-name">Body Armor with Breast Protector</p>
+      <p class="price">₱3,000</p>
+      <div class="size-selection">
+        <select class="size-select">
+          <option>Please select size</option>
+          <option>XS</option>
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+          <option>XL</option>
+          <option>XXL</option>
+        </select>
+      </div>
+      <button class="add-to-cart-button">Add to Cart</button>
+    </div>
+
+    <div class="product" data-name="Kumite Gears Red and Blue" data-price="3000" data-image="PROD/Eqp5.jpg">
+      <div class="carousel-container">
+        <div class="carousel-wrapper">
+          <div class="carousel-slide active">
+            <img src="PROD/Eqp5.jpg" alt="Eqp5">
+          </div>
+          <div class="carousel-slide">
+            <img src="PROD/Eqp7.jpg" alt="Eqp7">
+          </div>
+        </div>
+        <div class="carousel-indicators">
+          <div class="carousel-indicator active"></div>
+          <div class="carousel-indicator"></div>
+        </div>
+      </div>
+      <p class="product-name">Kumite Gears Red and Blue</p>
+      <p class="price">₱3,000</p>
+      <div class="size-selection">
+        <select class="size-select">
+          <option>Please select size</option>
+          <option>XS</option>
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+          <option>XL</option>
+          <option>XXL</option>
+        </select>
+      </div>
+      <button class="add-to-cart-button">Add to Cart</button>
+    </div>
+
+    <div class="product" data-name="Kumite Gears Red and Blue 2" data-price="3000" data-image="PROD/Eqp6.jpeg">
+      <div class="carousel-container">
+        <div class="carousel-wrapper">
+          <div class="carousel-slide active">
+            <img src="PROD/Eqp6.jpeg" alt="Eqp6">
+          </div>
+          <div class="carousel-slide">
+            <img src="PROD/Eqp8.jpg" alt="Eqp8">
+          </div>
+        </div>
+        <div class="carousel-indicators">
+          <div class="carousel-indicator active"></div>
+          <div class="carousel-indicator"></div>
+        </div>
+      </div>
+      <p class="product-name">Kumite Gears Red and Blue 2</p>
+      <p class="price">₱3,000</p>
+      <div class="size-selection">
+        <select class="size-select">
+          <option>Please select size</option>
+          <option>XS</option>
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+          <option>XL</option>
+          <option>XXL</option>
+        </select>
+      </div>
+      <button class="add-to-cart-button">Add to Cart</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 PKTS Karate Dojo. All Rights Reserved.</p>
+  </footer>
+</div>
+<div id="cart-toast" class="toast">Item added to cart!</div>
+<script src="js/hp.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/prod.js"></script>
+</body>
+</html>

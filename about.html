@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsive design for mobile devices -->
+    <title>About - PKTS Karate</title>
+    <link rel="icon" href="logos/PKTS LOGO.png" type="image/png"> <!-- Favicon for browser tab -->
+    <link rel="stylesheet" href="css/about.css"> <!-- Stylesheet specific to the About page -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Google Fonts for Anton and Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> <!-- Google Font for Montserrat -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- Font Awesome for icons -->
+</head>
+<body class="fade-in"> <!-- Class for fade-in animation on page load -->
+<div class="page-wrapper">
+  <div class="top-bar">
+    <header class="main-header">
+      <div class="logo-container">
+        <a href="homepage.html" class="logo-text">
+          <img src="logos/PKTS LOGO.png" alt="PKTS Logo" class="header-logo"> <!-- PKTS logo linking to homepage -->
+        </a>
+      </div>
+      <div class="hamburger-container" id="hamburger" onclick="toggleNav(this)"> <!-- Hamburger menu for mobile navigation -->
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <div class="main-nav-container">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="Homepage.html">HOME</a></li>
+            <li><a href="about.html" class="active">ABOUT</a></li> <!-- Active class highlights current page -->
+            <li class="dropdown has-submenu"><a href="#">PRODUCTS</a> <!-- Dropdown menu for products -->
+              <div class="dropdown-content">
+                <a href="uniform.html">Uniforms</a>
+                <a href="eqpmnt.html">Gears</a>
+              </div>
+            </li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="register.html">APPOINTMENT</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="logo-container">
+        <a href="cart.html" class="cart-container header-cart">
+          <img src="logos/shopping-cart (1).png" alt="Cart Logo" class="cart-icon"> <!-- Shopping cart icon linking to cart page -->
+        </a>
+        <a href="homepage.html" class="logo-text">
+          <img src="logos/JKS LOGO.png" alt="JKS Logo" class="header-logo"> <!-- JKS logo linking to homepage -->
+        </a>
+      </div>
+    </header>
+    <!-- Side Navigation Bar -->
+    <div id="mySidenav" class="sidenav"> <!-- Mobile side navigation menu -->
+      <div class="hamburger-container" id="hamburger-sidenav" onclick="toggleNav(this)"> <!-- Hamburger menu for side nav -->
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <a href="Homepage.html">HOME</a>
+      <a href="about.html" class="active">ABOUT</a> <!-- Active class for current page -->
+      <div class="dropdown has-submenu">
+        <a href="#" onclick="toggleDropdown(this)">PRODUCTS</a> <!-- Dropdown for products in side nav -->
+        <div class="dropdown-content">
+          <a href="uniform.html">Uniforms</a>
+          <a href="eqpmnt.html">Gears</a>
+        </div>
+      </div>
+      <a href="contact.html">CONTACT</a>
+      <a href="register.html">APPOINTMENT</a>
+      <a href="cart.html" class="cart-container" id="cart">
+        <img src="logos/shopping-cart (1).png" alt="Cart Logo"> <!-- Cart icon in side nav -->
+      </a>
+    </div>
+  </div>
+  <div class="content-wrapper">
+    <div class="about-container">
+      <section class="about"> <!-- About section with core information -->
+        <h2>About PKTS Karate</h2>
+        <h3><i class="fas fa-fist-raised"></i> Our Dedication</h3> <!-- Font Awesome icon for visual emphasis -->
+        <p>Philippine Karate Training Society (PKTS) is dedicated to the <strong>promotion and development of traditional Shotokan Karate</strong> in the Philippines. Founded on the principles of <strong>discipline, respect, and perseverance</strong>, PKTS provides a structured and supportive environment for individuals of all ages and skill levels to learn and excel in the art of Karate-do.</p>
+        <hr>
+        <h3><i class="fas fa-users"></i> Our Philosophy</h3> <!-- Icon for philosophy section -->
+        <p>We believe that Karate is <strong>more than just a martial art</strong>; it is a way of life that cultivates <strong>physical fitness, mental fortitude, and character development</strong>. Our experienced and certified instructors are committed to imparting not only the techniques and skills of Karate but also the rich philosophy and ethical values that underpin it.</p>
+        <hr>
+        <h3><i class="fas fa-graduation-cap"></i> Our Commitment to You</h3> <!-- Icon for commitment section -->
+        <p>Through <strong>rigorous training, regular practice, and a spirit of continuous improvement</strong>, PKTS aims to empower its members to achieve their full potential, both on and off the dojo. Whether you are a beginner taking your first steps in martial arts or an experienced practitioner seeking to refine your skills, PKTS offers a <strong>welcoming and challenging community</strong> to help you on your journey.</p>
+      </section>
+      <section class="benefits" id="benefits-section"> <!-- Benefits of studying karate -->
+        <h2>Why Study Karate?</h2>
+        <h3>PHYSICAL DEVELOPMENT</h3>
+        <ul>
+          <li><strong>IMPROVED PHYSICAL FITNESS:</strong> Karate training is a full-body workout that enhances strength, stamina, flexibility, balance, and coordination. It's a great way to get in shape and maintain a healthy lifestyle.</li>
+          <li><strong>ENHANCED MOTOR SKILLS:</strong> The precise movements and techniques in karate help develop fine and gross motor skills.</li>
+          <li><strong>WEIGHT MANAGEMENT:</strong> The rigorous physical activity helps burn calories and manage weight effectively.</li>
+          <li><strong>BETTER CARDIOVASCULAR HEALTH:</strong> Regular training improves heart health and endurance.</li>
+        </ul>
+        <h3>MENTAL AND EMOTIONAL GROWTH</h3>
+        <ul>
+          <li><strong>INCREASED DISCIPLINE AND SELF-CONTROL:</strong> Karate emphasizes structure, respect for rules, and consistent practice, which cultivates discipline and self-control.</li>
+          <li><strong>IMPROVED FOCUS AND CONCENTRATION:</strong> The mental focus required during training can translate to better concentration in other areas of life, such as school or work.</li>
+          <li><strong>BOOSTED CONFIDENCE AND SELF-ESTEEM:</strong> As students master new techniques and progress through the ranks, they gain a sense of accomplishment and increased self-belief.</li>
+          <li><strong>STRESS REDUCTION:</strong> The physical exertion and mental focus of karate can be a healthy outlet for stress and anxiety.</li>
+          <li><strong>DEVELOPMENT OF PERSEVERANCE AND RESILIENCE:</strong> Overcoming challenges in training builds mental toughness and the ability to persevere through difficulties.</li>
+          <li><strong>CULTIVATION OF MINDFULNESS:</strong> Paying attention to movements and breathing during practice can promote a sense of mindfulness and presence.</li>
+        </ul>
+        <h3>SELF-DEFENSE SKILLS</h3>
+        <ul>
+          <li><strong>PRACTICAL SELF-DEFENSE TECHNIQUES:</strong> Karate teaches effective techniques for self-protection in various situations.</li>
+          <li><strong>INCREASED SELF-AWARENESS:</strong> Training can make individuals more aware of their surroundings and potential threats.</li>
+          <li><strong>BUILDING CONFIDENCE TO HANDLE CONFRONTATIONS:</strong> The skills and mindset developed in karate can provide the confidence to de-escalate or respond effectively to aggressive situations.</li>
+        </ul>
+        <h3>PERSONAL AND SOCIAL DEVELOPMENT</h3>
+        <ul>
+          <li><strong>LEARNING RESPECT AND COURTESY:</strong> Karate emphasizes respect for instructors, fellow students, and the dojo itself.</li>
+          <li><strong>DEVELOPMENT OF CHARACTER:</strong> The principles of karate, such as integrity, humility, and perseverance, contribute to overall character development.</li>
+          <li><strong>BUILDING SOCIAL SKILLS AND POSITIVE RELATIONSHIPS:</strong> Training in a dojo provides a supportive community and opportunities to build friendships with like-minded individuals.</li>
+        </ul>
+      </section>
+      <div class="join-container">
+        <p class="join-text"><b>Interested in Joining or Enrolling your Children?</b></p> <!-- Call-to-action text -->
+      </div>
+      <div class="appointment-cta">
+        <a href="register.html" class="btn-link">Book your Appointment Now!</a> <!-- CTA button linking to appointment page -->
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2025 PKTS Karate Dojo. All Rights Reserved.</p> <!-- Footer with copyright notice -->
+    </footer>
+  </div>
+</div>
+<script src="js/about.js"></script> <!-- JavaScript file specific to About page -->
+<script src="js/hp.js"></script> <!-- JavaScript file for general homepage functionality -->
+</body>
+</html>

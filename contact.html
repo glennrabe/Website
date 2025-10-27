@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" /> <!-- Specifies character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ensures responsive design for mobile devices -->
+    <title>Contact Us</title>
+    <link rel="icon" href="logos/PKTS LOGO.png" type="image/png"> <!-- Favicon for browser tab -->
+    <link rel="stylesheet" href="css/contacts.css" /> <!-- Stylesheet specific to the Contact page -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Google Fonts for Anton and Roboto -->
+</head>
+<body class="fade-in"> <!-- Class for fade-in animation on page load -->
+    <div class="top-bar">
+        <header class="main-header">
+            <div class="logo-container">
+                <a href="homepage.html" class="logo-text">
+                    <img src="logos/PKTS LOGO.png" alt="PKTS Logo" class="header-logo"> <!-- PKTS logo linking to homepage -->
+                </a>
+            </div>
+            <div class="hamburger-container">
+                <div class="container" id="hamburger" onclick="myFunction(this); openNav();"> <!-- Hamburger menu for mobile navigation -->
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+            <div class="main-nav-container">
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="Homepage.html" class="active">HOME</a></li> <!-- Active class highlights current page (note: should be on CONTACT) -->
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li class="dropdown has-submenu"><a href="">PRODUCTS</a> <!-- Dropdown menu for products -->
+                            <div class="dropdown-content">
+                                <a href="uniform.html">Uniforms</a>
+                                <a href="eqpmnt.html">Gears</a>
+                            </div>
+                        </li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                        <li><a href="register.html">APPOINTMENT</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="logo-container">
+                <a href="homepage.html" class="logo-text">
+                    <img src="logos/JKS LOGO.png" alt="JKS Logo" class="header-logo"> <!-- JKS logo linking to homepage -->
+                </a>
+            </div>
+        </header>
+    </div>
+
+    <!-- Side Navigation Bar -->
+    <div id="mySidenav" class="sidenav"> <!-- Mobile side navigation menu -->
+        <a href="Homepage.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <div class="dropdown has-submenu">
+            <a href="#">PRODUCTS</a> <!-- Dropdown for products in side nav -->
+            <div class="dropdown-content">
+                <a href="uniform.html">Uniforms</a>
+                <a href="eqpmnt.html">Gears</a>
+            </div>
+        </div>
+        <a href="contact.html">CONTACT</a> <!-- Should have active class for current page -->
+        <a href="register.html">APPOINTMENT</a>
+        <a href="cart.html" id="cart" class="cart-container">
+            <img src="logos/shopping-cart (1).png" alt="Cart Logo"> <!-- Cart icon in side nav -->
+        </a>
+    </div>
+
+    <section class="hero">
+        <section class="contact-section"> <!-- Contact information section -->
+            <div class="container">
+                <div class="contact-header">
+                    <h2>GET IN TOUCH</h2> <!-- Section title -->
+                </div>
+                <div class="contact-boxes">
+                    <div class="contact-box">
+                        <div class="icon-circle">
+                            🔎
+                        </div>
+                        <h3>VISIT US</h3>
+                        <p>Robinson Metro East, Studio Level Level 2, Barangay Marikina-Infanta Hwy, Pasig,<br>1600 Metro Manila, Philippines</p> <!-- Physical address of the dojo -->
+                    </div>
+                    <div class="contact-box">
+                        <div class="icon-circle">
+                            ✉
+                        </div>
+                        <h3>EMAIL US</h3>
+                        <p><a href="mailto:ryo08@gmail.com">ryo08@gmail.com</a></p> <!-- Email link for contact -->
+                    </div>
+                    <div class="contact-box">
+                        <div class="icon-circle">
+                            ☏
+                        </div>
+                        <h3>CALL US</h3>
+                        <p>+0927-7869304</p> <!-- Phone number for contact -->
+                    </div>
+                    <div class="contact-box">
+                        <div class="icon-circle">
+                            ⓕ
+                        </div>
+                        <h3>FOLLOW US</h3>
+                        <a href="https://facebook.com/JKS-PKTS" target="_blank">facebook.com/JKSPKTS</a> <!-- Social media link opening in new tab -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.2842749999997!2d121.07279357486375!3d14.63477748572118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b8118193b4a1%3A0x802991154209931a!2sRobinsons%20Metro%20East!5e0!3m2!1sen!2sph!4v1714545772897!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> <!-- Embedded Google Map showing dojo location -->
+    </div>
+    <footer>
+        <p>© 2025 PKTS Karate Dojo. All Rights Reserved.</p> <!-- Footer with copyright notice -->
+    </footer>
+
+    <script src="js/hp.js"></script> <!-- JavaScript for general homepage functionality -->
+    <script src="js/contact.js"></script> <!-- JavaScript specific to Contact page -->
+</body>
+</html>

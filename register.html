@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" /> <!-- Specifies character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ensures responsive design for mobile devices -->
+    <title>Register - PKTS Karate</title>
+    <link rel="icon" href="logos/PKTS LOGO.png" type="image/png"> <!-- Favicon for browser tab -->
+    <link rel="stylesheet" href="css/register.css" /> <!-- Stylesheet specific to the Register page -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Google Fonts for Anton and Roboto -->
+</head>
+<body class="fade-in"> <!-- Class for fade-in animation on page load -->
+    <!-- Sidebar -->
+    <div id="mySidenav" class="sidenav"> <!-- Mobile side navigation menu -->
+        <nav class="sidenav-nav">
+            <ul>
+                <li><a href="Homepage.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li class="dropdown has-submenu">
+                    <a href="javascript:void(0)" onclick="toggleDropdown(this)">PRODUCTS</a> <!-- Dropdown for products in side nav -->
+                    <div class="dropdown-content">
+                        <a href="uniform.html">Uniforms</a>
+                        <a href="eqpmnt.html">Gears</a>
+                    </div>
+                </li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="register.html">APPOINTMENT</a></li> <!-- Should have active class for current page -->
+                <li id="cart" style="display: none;">
+                    <a href="cart.html">
+                        <img src="logos/shopping-cart (1).png" alt="Cart Logo" class="header-logo-cart"> <!-- Cart icon in side nav, hidden by default -->
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="top-bar">
+        <header class="main-header">
+            <div class="logo-container">
+                <a href="homepage.html" class="logo-text">
+                    <img src="logos/PKTS LOGO.png" alt="PKTS Logo" class="header-logo"> <!-- PKTS logo linking to homepage -->
+                </a>
+            </div>
+            <div class="main-nav-container">
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="Homepage.html" class="active">HOME</a></li> <!-- Active class highlights current page (note: should be on APPOINTMENT) -->
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li class="dropdown has-submenu">
+                            <a href="javascript:void(0)" onclick="toggleDropdown(this)">PRODUCTS</a> <!-- Dropdown menu for products -->
+                            <div class="dropdown-content">
+                                <a href="uniform.html">Uniforms</a>
+                                <a href="eqpmnt.html">Gears</a>
+                            </div>
+                        </li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                        <li><a href="register.html">APPOINTMENT</a></li>
+                    </ul>
+                </nav>
+                <!-- Hamburger Icon -->
+                <div id="hamburger" class="container" onclick="myFunction(this); openNav()"> <!-- Hamburger menu for mobile navigation -->
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+            <div class="logo-container">
+                <a href="homepage.html" class="logo-text">
+                    <img src="logos/JKS LOGO.png" alt="JKS Logo" class="header-logo"> <!-- JKS logo linking to homepage -->
+                </a>
+            </div>
+        </header>
+    </div>
+
+    <div class="job-application">
+        <b><h1>Appointment</h1></b> <!-- Section title for appointment form -->
+        <p>Complete the form to schedule your appointment and begin your karate journey.</p>
+        <form action="contact.html" method="get"> <!-- Form submits to contact.html using GET method -->
+            <label for="fullname">Full Name</label>
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="text" id="firstName" placeholder="First Name" required oninput="this.value = this.value.replace(/[0-9]/g, '')"> <!-- First name input, prevents numbers -->
+                </div>
+                <div class="form-group">
+                    <input type="text" id="middleName" placeholder="Middle Name" oninput="this.value = this.value.replace(/[0-9]/g, '')"> <!-- Middle name input, optional -->
+                </div>
+                <div class="form-group">
+                    <input type="text" id="lastName" placeholder="Last Name" required oninput="this.value = this.value.replace(/[0-9]/g, '')"> <!-- Last name input, prevents numbers -->
+                </div>
+            </div>
+            <label for="address">Current Address</label>
+            <div class="form-group">
+                <input type="text" placeholder="Street Address" required> <!-- Street address input -->
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="text" placeholder="City" required> <!-- City input -->
+                </div>
+                <div class="form-group">
+                    <select required> <!-- State/Province dropdown -->
+                        <option disabled selected>State / Province</option>
+                        <option>Ilocos Norte</option>
+                        <option>Ilocos Sur</option>
+                        <option>La Union</option>
+                        <option>Pangasinan</option>
+                        <option>Benguet</option>
+                        <option>Bulacan</option>
+                        <option>Pampanga</option>
+                        <option>Batangas</option>
+                        <option>Cavite</option>
+                        <option>Laguna</option>
+                        <option>Quezon</option>
+                        <option>Rizal</option>
+                        <option>National Capital Region (NCR)</option>
+                        <option>Cebu</option>
+                        <option>Davao del Sur</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="text" placeholder="Postal / Zip Code" required maxlength="4"> <!-- Zip code input, max 4 characters -->
+                </div>
+            </div>
+            <label for="email">Email Address</label>
+            <div class="form-group">
+                <input type="email" placeholder="example@example.com" required pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+"> <!-- Email input with regex pattern validation -->
+            </div>
+            <label for="phone">Phone Number</label>
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="text" placeholder="Phone Number" required oninput="this.value = this.value.replace(/[^0-9]/g, '')" maxlength="11"> <!-- Phone number input, numbers only, max 11 digits -->
+                </div>
+            </div>
+            <button type="submit">Book your Appointment Now!</button> <!-- Submit button for form -->
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2025 PKTS Karate Dojo. All Rights Reserved.</p> <!-- Footer with copyright notice -->
+    </footer>
+    <div id="cart-toast" class="toast">Thank You For Booking an Appointment With Us!</div> <!-- Toast notification for appointment confirmation -->
+    <script src="js/hp.js"></script> <!-- JavaScript for general homepage functionality -->
+    <script src="js/appoint.js"></script> <!-- JavaScript specific to Appointment page -->
+</body>
+</html>
