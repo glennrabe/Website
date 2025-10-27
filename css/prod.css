@@ -1,0 +1,748 @@
+/* Product CSS: Page layout and components */
+html, body {
+  height: 100%; /* Full height */
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif; /* Default font */
+  background-size: cover; /* Background cover */
+  color: #252525; /* Text color */
+  line-height: 1.6; /* Line spacing */
+  box-sizing: border-box; /* Box sizing */
+  transition: padding-top 0.3s ease; /* Padding transition */
+  overflow-x: hidden; /* No horizontal scroll */
+  display: flex;
+  flex-direction: column; /* Vertical stack */
+}
+
+/* Page Wrapper: Main content container */
+.page-wrapper {
+  flex: 1; /* Fill space */
+  display: flex;
+  flex-direction: column; /* Vertical stack */
+}
+
+/* Content Wrapper: Main content with fade */
+.content-wrapper {
+  flex: 1;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out; /* Fade effect */
+}
+
+/* Content Fade-Out: Fade out content */
+.content-wrapper.fade-out {
+  opacity: 0; /* Hidden */
+}
+
+/* Body Fade-In: Initial fade-in */
+body.fade-in {
+  opacity: 0; /* Hidden */
+}
+
+/* Body Fade-In Active: Visible fade-in */
+body.fade-in.active {
+  opacity: 1; /* Visible */
+  transition: opacity 0.5s ease-in-out 0.3s;
+}
+
+/* Top Bar Logos: Logo images */
+.top-bar-logos img {
+  display: none; /* Hidden by default */
+}
+
+/* Header: Fixed header */
+header {
+  background: linear-gradient(to bottom, rgba(0, 0.4, 0.7, 1), transparent); /* Gradient */
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between; /* Space between */
+  align-items: center;
+  position: fixed; /* Fixed top */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100; /* Above content */
+  transition: background-color 0.3s ease; /* Background transition */
+}
+
+/* Scrolled Header: Darker on scroll */
+.main-header.scrolled {
+  background-color: rgba(37, 37, 37, 0.8); /* Dark background */
+}
+
+/* Logo Container: Logo and text */
+.logo-container {
+  display: flex;
+  align-items: center; /* Vertical align */
+}
+
+/* Header Logo: Main logo */
+.header-logo {
+  height: auto;
+  width: auto;
+  max-height: 80px; /* Max height */
+  margin-right: 10px;
+}
+
+/* Header Cart Logo: Cart icon */
+.header-logo-cart {
+  height: auto;
+  width: auto;
+  max-height: 35px; /* Smaller size */
+  margin-right: 15px;
+}
+
+/* Logo Text: Logo text */
+.logo-text {
+  color: #ffffff; /* White text */
+  text-decoration: none;
+  font-size: 1em;
+  margin-right: 20px;
+  font-family: 'Anton', sans-serif; /* Logo font */
+  letter-spacing: 0.05em;
+}
+
+/* Logo Text Hover: Hover effect */
+.logo-text:hover {
+  color: #c62828; /* Red on hover */
+}
+
+/* Hamburger Icon: Mobile menu toggle */
+.hamburger-container {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Hamburger Bars: Menu icon bars */
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #ffffff; /* White bars */
+  margin: 6px 0;
+  transition: 0.4s; /* Animation */
+}
+
+/* Hamburger Bar 1 Active: Form 'X' */
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg); /* Rotate */
+}
+
+/* Hamburger Bar 2 Active: Hide */
+.change .bar2 {
+  opacity: 0; /* Hidden */
+}
+
+/* Hamburger Bar 3 Active: Form 'X' */
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg); /* Rotate */
+}
+
+/* Header Cart: Cart icon container */
+.header-cart {
+  display: none; /* Hidden by default */
+  margin-right: 10px;
+}
+
+/* Cart Icon: Cart image */
+.header-cart img.cart-icon {
+  max-height: 30px; /* Small size */
+  width: auto;
+  vertical-align: middle;
+}
+
+/* Main Navigation: Centered nav bar */
+.main-nav-container {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center; /* Center items */
+  align-items: center;
+  transition: background-color 0.3s ease;
+  position: relative;
+  z-index: 99; /* Below header */
+  background-color: transparent;
+}
+
+/* Navigation List: Nav items */
+.main-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center; /* Vertical align */
+}
+
+/* Navigation Items: Individual items */
+.main-nav ul li {
+  margin-right: 25px;
+  background-color: transparent;
+}
+
+/* Navigation Spacing: Non-first items */
+.main-nav ul li:not(:first-child) {
+  margin-left: 25px; /* Spacing */
+}
+
+/* Navigation Separator: Item separator */
+.main-nav ul li:not(:last-child)::after {
+  content: "|"; /* Separator */
+  color: #999999;
+  margin-left: 25px;
+}
+
+/* Navigation Links: Nav link styles */
+.main-nav ul li a {
+  color: #ffffff; /* White text */
+  text-decoration: none;
+  padding: 0.5em 0;
+  font-size: 1.1em;
+  transition: color 0.3s ease, font-weight 0.3s ease;
+  font-family: 'Montserrat', sans-serif; /* Nav font */
+  letter-spacing: 0.05em;
+  background-color: transparent;
+  font-weight: 400;
+}
+
+/* Navigation Links Hover: Hover effect */
+.main-nav ul li a:hover {
+  color: #ff0000; /* Red on hover */
+  font-weight: 700; /* Bold */
+}
+
+/* Dropdown: Dropdown menu container */
+.dropdown {
+  position: relative; /* Relative positioning */
+}
+
+/* Dropdown Link: Dropdown parent link */
+.dropdown > a,
+.has-submenu > a {
+  position: relative;
+  padding-right: 1.5em;
+}
+
+/* Dropdown Arrow: Dropdown indicator */
+.has-submenu > a::after {
+  content: '\25BE'; /* Down arrow */
+  margin-left: 0.5em;
+  font-size: 0.8em;
+  vertical-align: middle;
+  transition: transform 0.2s; /* Arrow rotation */
+  display: inline-block;
+}
+
+/* Dropdown Show: Show on hover/focus */
+.dropdown:focus-within > .dropdown-content,
+.dropdown:hover > .dropdown-content {
+  display: block; /* Show dropdown */
+}
+
+/* Dropdown Content: Dropdown menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%; /* Below parent */
+  left: 0;
+  min-width: 220px;
+  background: #23272f; /* Dark background */
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.18); /* Shadow */
+  border: 1px solid #222;
+  z-index: 1000; /* Above content */
+  padding: 0.5em 0;
+  animation: dropdown-fade-in 0.25s; /* Fade-in */
+}
+
+/* Dropdown Animation: Dropdown fade-in */
+@keyframes dropdown-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dropdown Links: Dropdown link styles */
+.dropdown-content a {
+  text-align: center;
+  color: #fff;
+  padding: 0.75em 1.5em;
+  text-decoration: none;
+  display: block;
+  font-size: 1em;
+  transition: background 0.2s, color 0.2s;
+  border: none;
+  background: none;
+}
+
+/* Dropdown Links Hover/Focus: Hover effect */
+.dropdown-content a:hover,
+.dropdown-content a:focus {
+  background: #1565c0; /* Blue background */
+  color: #fff;
+}
+
+/* Dropdown Links Active: Active state */
+.dropdown-content a:active {
+  background: #c62828; /* Red background */
+  color: #fff;
+}
+
+/* Side Navigation: Mobile sidenav */
+.sidenav {
+  height: 100%;
+  width: 0; /* Hidden by default */
+  position: fixed;
+  z-index: 1001; /* Above content */
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(0, 0.4, 0.7, 0.8), transparent); /* Gradient */
+  overflow-x: hidden;
+  transition: 0.5s; /* Width transition */
+  padding-top: 60px;
+}
+
+/* Side Navigation Links: Sidenav links */
+.sidenav a, .sidenav .dropdown > a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2em;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+}
+
+/* Side Navigation Links Hover: Hover effect */
+.sidenav a:hover, .sidenav .dropdown > a:hover {
+  color: #ff0000; /* Red on hover */
+}
+
+/* Side Navigation Dropdown: Dropdown content */
+.sidenav .dropdown-content {
+  display: none;
+  background-color: transparent !important; /* Transparent */
+  box-shadow: none;
+  padding-left: 20px;
+}
+
+/* Side Navigation Dropdown Links: Dropdown links */
+.sidenav .dropdown-content a {
+  font-size: 1em;
+  padding: 8px 8px 8px 32px;
+  background-color: transparent !important;
+  opacity: 0.8;
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: 0 0 8px #000, 0 0 2px #fff200; /* Text shadow */
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+/* Side Navigation Dropdown Hover: Hover effect */
+.sidenav .dropdown-content a:hover,
+.sidenav .dropdown-content a:focus {
+  background: none;
+  color: #ff3c00; /* Brighter red */
+  text-shadow: 0 0 12px #fff, 0 0 4px #ff3c00; /* Enhanced shadow */
+}
+
+/* Side Navigation Hamburger: Hamburger in sidenav */
+.sidenav .hamburger-container {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  padding: 10px;
+}
+
+/* Side Navigation Cart: Cart container */
+.sidenav .cart-container {
+  padding: 8px 8px 8px 32px;
+}
+
+/* Side Navigation Cart Icon: Cart image */
+.sidenav .cart-container img {
+  max-height: 30px; /* Matches header */
+  vertical-align: middle;
+}
+
+/* Responsive Small Screens: Max-width 700px */
+@media (max-width: 700px) {
+  .main-nav-container {
+    display: none; /* Hide main nav */
+  }
+
+  .hamburger-container {
+    display: inline-block; /* Show hamburger */
+  }
+
+  .header-cart {
+    display: none; /* Hide cart icon */
+  }
+
+  .sidenav .dropdown-content {
+    display: none; /* Hide dropdown */
+  }
+
+  .sidenav .dropdown.active .dropdown-content {
+    display: block; /* Show active dropdown */
+  }
+
+  .main-header {
+    padding: 10px 15px; /* Adjusted padding */
+  }
+
+  .header-logo {
+    max-height: 60px; /* Smaller logo */
+  }
+
+  .header-logo-cart {
+    max-height: 30px;
+  }
+}
+
+/* Responsive Large Screens: Min-width 701px */
+@media (min-width: 701px) {
+  .hamburger-container {
+    display: none; /* Hide hamburger */
+  }
+
+  .sidenav {
+    display: none; /* Hide sidenav */
+  }
+
+  .header-cart {
+    display: inline-block; /* Show cart */
+  }
+}
+
+/* Responsive Navigation: Vertical nav for small screens */
+@media (max-width: 700px) {
+  .main-nav ul {
+    flex-direction: column; /* Vertical stack */
+    align-items: flex-start;
+  }
+
+  .dropdown-content {
+    position: static; /* No absolute position */
+    min-width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+    border: none;
+    animation: none;
+  }
+}
+
+/* Dropdown Accessibility: Keyboard support */
+.dropdown > a:focus + .dropdown-content,
+.dropdown-content:focus-within {
+  display: block; /* Show on focus */
+}
+
+/* Dropdown Arrow Active: Rotate arrow */
+.dropdown:hover > .has-submenu > a::after,
+.dropdown:focus-within > .has-submenu > a::after {
+  transform: rotate(180deg); /* Rotate arrow */
+}
+
+/* Product Container: Product card layout */
+.container {
+  display: flex;
+  justify-content: center; /* Center items */
+  flex-wrap: wrap; /* Wrap on small screens */
+  gap: 20px;
+  margin-top: 120px; /* Header space */
+  padding: 20px;
+}
+
+/* Carousel: Image carousel container */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  margin: 10px auto;
+  overflow: hidden; /* Hide overflow */
+  border-radius: 8px;
+  height: 250px; /* Fixed height */
+}
+
+/* Carousel Slide: Individual slide */
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* Hidden */
+  transition: opacity 0.5s ease-in-out; /* Fade transition */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Carousel Slide Image: Slide images */
+.carousel-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Fit without distortion */
+  border-radius: 8px;
+}
+
+/* Active Carousel Slide: Visible slide */
+.carousel-slide.active {
+  opacity: 1; /* Visible */
+  z-index: 1; /* Above others */
+}
+
+/* Carousel Indicators: Navigation dots */
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%); /* Center */
+  display: flex;
+  gap: 8px;
+}
+
+/* Carousel Indicator: Individual dot */
+.carousel-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Active Carousel Indicator: Active dot */
+.carousel-indicator.active {
+  background-color: white; /* Solid white */
+}
+
+/* Carousel Indicator Hover: Hover effect */
+.carousel-indicator:hover {
+  background-color: rgba(255, 255, 255, 0.8); /* Opaque */
+}
+
+/* Product Card: Product card styles */
+.product {
+  background: white;
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 8px;
+  margin: 10px;
+  padding: 15px;
+  width: 230px;
+  height: 400px; /* Fixed height */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Even spacing */
+}
+
+/* Product Image: Product images */
+.product img {
+  max-width: 100%;
+  height: 200px; /* Fixed height */
+  object-fit: contain; /* Fit without distortion */
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Product Title: Product titles */
+.product h3 {
+  margin: 10px 0 5px;
+  color: #252525;
+}
+
+/* Product Description: Descriptions */
+.product p {
+  color: #555; /* Gray text */
+  margin-bottom: 5px;
+}
+
+/* Product Price: Price styles */
+.price {
+  font-weight: bold;
+  color: #c62828; /* Red price */
+  margin-bottom: 10px;
+}
+
+/* Product Card Hover: Hover effects */
+.product:hover {
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  transform: scale(1.02); /* Slight zoom */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Size Selection: Size dropdown */
+.size-selection {
+  margin-bottom: 10px; /* Spacing */
+}
+
+/* Add to Cart Button: Cart button */
+.add-to-cart-button {
+  background-color: #2e7d32; /* Green */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+/* Add to Cart Button Hover: Hover effect */
+.add-to-cart-button:hover {
+  background-color: #f33100; /* Orange/red */
+}
+
+/* Toast Notification: Popup notification */
+.toast {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%); /* Center */
+  background-color: #3e3e49; /* Dark gray */
+  color: #ffffff;
+  padding: 15px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: none; /* Hidden by default */
+  z-index: 999; /* Above content */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  animation: fadein-top 0.3s ease, fadeout-top 0.3s ease 2.5s; /* Fade animations */
+}
+
+/* Toast Fade-In: Animation for appearing */
+@keyframes fadein-top {
+  from { opacity: 0; top: 10px; }
+  to { opacity: 1; top: 30px; }
+}
+
+/* Toast Fade-Out: Animation for disappearing */
+@keyframes fadeout-top {
+  from { opacity: 1; top: 30px; }
+  to { opacity: 0; top: 10px; }
+}
+
+/* Footer: Page footer */
+footer {
+  background-color: #333; /* Dark background */
+  color: white;
+  text-align: center;
+  padding: 1em;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: auto; /* Bottom of flex */
+}
+
+/* Cart Count Badge: Cart item badge */
+.cart-count-badge {
+    position: absolute;
+    top: -8px; /* Vertical position */
+    right: -8px; /* Horizontal position */
+    background-color: #ff0000; /* Red */
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 10; /* Above icon */
+    border: 2px solid white;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    display: none; /* Hidden if 0 */
+}
+
+/* Header Cart Container: Cart badge positioning */
+.header-cart {
+    position: relative;
+    /* Other styles */
+}
+
+/* Cart Container: Cart icon and badge */
+.cart-container {
+    position: relative; /* For badge positioning */
+    display: inline-block;
+}
+
+/* Cart Badge: Notification badge */
+.cart-badge {
+    position: absolute;
+    top: -5px; /* Adjust position */
+    right: -10px; /* Adjust position */
+    padding: 3px 6px; /* Circle size */
+    border-radius: 50%; /* Circle shape */
+    background-color: #ff4500; /* Bright red */
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bold;
+    line-height: 1; /* Center number */
+    min-width: 15px; /* For single digit */
+    text-align: center;
+    visibility: hidden; /* Hidden if 0 */
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* Cart Badge Visible: Show badge */
+.cart-badge.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Side Navigation Cart Badge: Sidenav badge */
+#cart .cart-badge {
+    top: 5px;
+    right: 5px;
+}
+
+/* Cart Container (Repeated): Cart icon and count */
+.cart-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Cart Count: Cart item count */
+.cart-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: red; /* Theme color */
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-weight: bold;
+  display: none; /* Hidden by default */
+}
+
+/* Cart Count Active: Show count */
+.cart-count.active {
+  display: inline-block; /* Show when active */
+}
+
+/* Toast Notification (Repeated): Alternative toast */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+/* Toast Show: Show toast */
+.toast.show {
+  opacity: 1;
+}
